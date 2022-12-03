@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>amanj2</title>
+	<link href='https://fonts.googleapis.com/css?family=Be Vietnam' rel='stylesheet'>
+	<style type="text/css">
+		@import url('https://fonts.cdnfonts.com/css/all-pony');
+
+		@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+		html{
+			background: url('chr.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		a{
+			text-decoration: none;
+			font-family: 'Be Vietnam';
+		}
+
+		.div1{
+			width: 250px;
+			margin-left: 600px;
+			margin-top: 20px;
+		}
+
+		.this{
+			font-family: 'All Pony';
+			font-size: 40px;
+			color: #7ED957;
+			
+
+		}
+		.div2{
+			width: 550px;
+			margin-top: 150px;
+			margin-left: 20px;
+		}
+		.send{
+			font-family: 'Be Vietnam';
+			font-size: 35px;
+			color: white;
+
+		}
+
+		.christ{
+			font-family: 'Nerko One';
+			font-size: 125px;
+			color: white;
+			font-weight: bold;
+			margin-top: 20px;
+			display: block;
+
+		}
+		.discount{
+			font-size: 44px;
+			font-family: 'Be Vietnam';
+			color: white;
+			margin-top: 30px;
+			display: block;
+
+
+		}
+		.discover{
+			background-color: #008037;
+			font-size: 30px;
+			color: white;
+			text-align: center;
+			display:inline;
+			border-radius: 25px;
+			width: 250px;
+			height: 60px;
+			text-decoration: none;
+			margin-top: 20px;
+			border-style: none;
+
+		}
+		.inform{
+			background-color: #008037;
+			font-size: 30px;
+			color: white;
+			text-align: center;
+			display:inline;
+			border-radius: 25px;
+			width: 250px;
+			height: 60px;
+			margin-top: 20px;
+			border-style: none;
+			margin-left: 5px;
+
+		}
+		.discover:hover,.inform:hover{
+			box-shadow: 4px 4px 4px lightgreen;
+			cursor: pointer;
+		}
+		.imgsale{
+			width: 200px;
+			position: absolute;
+			bottom: 290px;
+			left: 520px;
+			transform: rotate(275deg);
+		}
+		.divsanta{
+			display:block;
+			width: 500px;
+			height: 750px;
+			margin-top: -660px;
+			margin-left: 65%;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<span class="this">This Christmas IS <center>Different</center> </span>
+		
+	</div>
+
+	<div class="div2">
+		<span class="send">Send us your page and products And we will get it From Here</span>
+	
+
+		<span class="christ">CHRISTMAS</span>
+		<span class="discount">Discounts Up to 60%</span>
+	
+	<a href="https://amanewjersey.org/"><button class="discover">Discover US</button>  </a>
+	<a href="amanj3.html"> <button class="inform">Inform US</button> </a>
+	</div>
+	<img class="imgsale" src="https://media-public.canva.com/j6flE/MAFC5Oj6flE/1/t.png">
+
+	<div id="k" class="divsanta" onmouseover="santa()" onmouseleave="song()"></div>
+
+<script type="text/javascript">
+	let k = 0
+	let s = 0
+	function santa() {
+if(k==0){		
+		let img = document.createElement('img');
+		img.src = 'https://acegif.com/wp-content/uploads/2021/4fh5wi/santa-claus-30.gif';
+		img.style.top = '0px';
+		img.style.position = 'absolute'
+		let interval = 0
+		let pos = 0
+		function position() {
+			if (pos == 280) {
+				interval = clearInterval();	
+			}
+			else{
+				pos = pos+1;
+				img.style.top = pos + 'px';
+			}}
+		interval = setInterval(position,1);
+		document.getElementById('k').appendChild(img)
+		k=1
+
+		let audio = new Audio('santa.mp3');
+		audio.play()
+	}
+	}
+function song() {
+	if (s ==0) {
+		let jing =  new Audio('jungle.mp3');
+		jing.play()
+		s = 1
+	}
+
+	
+}
+
+
+	
+</script>
+</body>
+</html>
